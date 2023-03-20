@@ -1,2 +1,5 @@
-[myhosts]
+[my_hosts]
 server[a:f].lab.example.com
+
+[servera]
+servera.lab.example.com
