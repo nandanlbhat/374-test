@@ -1,0 +1,9 @@
+---
+ansible-navigator:
+  execution-environment:
+    enabled: True
+    image: hub.lab.example.com/ee-supported-rhel8:latest
+    pull-policy: missing
+  logging:
+    level: critical
+    mode: stdout
