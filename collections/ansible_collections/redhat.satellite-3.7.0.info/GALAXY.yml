@@ -1,0 +1,45 @@
+download_url: https://hub.lab.example.com/api/galaxy/v3/plugin/ansible/content/rh-certified/collections/artifacts/redhat-satellite-3.7.0.tar.gz
+format_version: 1.0.0
+name: satellite
+namespace: redhat
+server: https://hub.lab.example.com/api/galaxy/content/rh-certified/
+signatures:
+- pubkey_fingerprint: 39B5D759361A97464C564A8FE1A4BD708A828AAD
+  pulp_created: '2022-12-19T16:05:13.135551Z'
+  signature: '-----BEGIN PGP SIGNATURE-----
+
+    Version: GnuPG v1
+
+
+    iQIVAwUAYz3a/OGkvXCKgoqtAQh1gg//d02MlhSUzfRWe2VBo+hOS/LuCH3nBFA7
+
+    TWbEdOEvQAraqygbAc1XxgEOLypBzrSmAHBF+K5xJL8yOhhNvoncx6zmKDko6p4f
+
+    pA6JmZSsH76M26RS4bAHdCPippq8yzb/5AUDF+Tl7m7oU4ZYCLMM/p/xvXH8fz25
+
+    HEmjV/yWR1CEsyPtFr60w4+jba2xDYV4KEMLZPAWT4xV2jo9Q5KXA8jR2/10Jslk
+
+    sFQaaVcVf3WU0RFw1t2qgSA9/g9ucCxlPszWj7SSNa2uX7azmBr1PkpDeHFKZb0t
+
+    vm/SUlWRNxOLJ1lZMUQgPRV7nngA1QlPHLarGxp3je3MRohYY+kv9FToOgsS00qD
+
+    YlXcD+psyKY/F0/HgmrWJk9iLEIKWxcMpr5O6jkAwi3+KxpGdI6VYQYLqYCJwC8e
+
+    hY2Cq+LNICi+a0nPoCdac/gb+E3jwm59xNGbh0rcGu3oMqBEHKcl8Vmqk9egZ+7j
+
+    R3KgyhpEg2sD0pfwXUaJmg4F3QnF2z4AkKAB7DZ9xVGoOVyurOGrydLZAcJuCt01
+
+    m11za4eLJP72LQyxGrj558nAJJtNHEu1wtAawMsKS6LffHg57j2+WKqWf28LuVWG
+
+    XHHZsysgJfzGE/2s0eTEq2vZubF1WJmuTaGj1opaC1ssVTgcIzZ423Cyzbg5aRNx
+
+    wR1prb5iX9g=
+
+    =2p5j
+
+    -----END PGP SIGNATURE-----
+
+'
+  signing_service: null
+version: 3.7.0
+version_url: /api/galaxy/content/rh-certified/v3/plugin/ansible/content/rh-certified/collections/index/redhat/satellite/versions/3.7.0/

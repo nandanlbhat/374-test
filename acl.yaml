@@ -1,0 +1,20 @@
+---
+- name: try out acls
+  hosts: servera
+  gather_facts: false
+  tasks:
+    - name: ensure a file is present
+      ansible.builtin.copy:
+      #copy:
+        dest: /tmp/test.txt
+        content: "test content"
+
+    - name: set an acl
+      ansible.posix.acl:
+      #acl:
+        path: /tmp/test.txt
+        entity: student
+        etype: user
+        permissions: r
+        state: present
+...

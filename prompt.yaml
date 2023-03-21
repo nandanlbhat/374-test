@@ -1,0 +1,14 @@
+---
+- name: prompt for value of a variable
+  hosts: servera
+  gather_facts: false
+
+  vars_prompt:
+    - name: var1
+      prompt: "Enter the value for var1: "
+
+  tasks:
+    - name: show variable value
+      debug:
+        var: var1
+...
