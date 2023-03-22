@@ -8,5 +8,5 @@ ansible-navigator:
   logging:
     level: critical
   mode: stdout
-#  playbook-artifact:
-#    enable: False
+  playbook-artifact:
+    enable: False

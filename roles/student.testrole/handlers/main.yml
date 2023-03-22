@@ -1,0 +1,5 @@
+---
+# handlers file for student.testrole
+- name: roles_handler
+  ansible.builtin.debug:
+    msg: roles_handler

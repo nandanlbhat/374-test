@@ -1,0 +1,13 @@
+---
+# tasks file for student.testrole
+
+- name: run the id command
+  ansible.builtin.command: id
+  #changed_when: false
+  register: id_out    
+  notify: roles_handler
+
+- name: show value of a variable
+  ansible.builtin.debug:
+    #var: testvar
+    var: id_out["stdout"]

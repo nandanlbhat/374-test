@@ -1,0 +1,17 @@
+---
+- name: show value of a variable
+  hosts: all
+  gather_facts: false
+  
+  vars:
+    testvar: "from playbook vars section"
+    mynewvar: "trying out something"
+
+  #roles:
+  #  - role: student.testrole
+
+  tasks:
+    - name: show value of a variable
+      ansible.builtin.debug:
+        msg: given values are {{ testvar }} and {{ mynewvar }}
+...

@@ -1,0 +1,31 @@
+---
+- name: check order of execution
+  hosts: servera
+  gather_facts: false
+
+
+  tasks:
+    - name: this was in tasks section
+      ansible.builtin.debug:
+        msg: "tasks section"
+      changed_when: true
+      notify: the_handlers
+ 
+
+  handlers:
+    - name: tasks_handler
+      ansible.builtin.debug:
+        msg: "tasks_handler"
+      listen: the_handlers
+ 
+    - name: post_tasks_handler
+      ansible.builtin.debug:
+        msg: "post_tasks_handler"
+      listen: the_handlers
+
+    - name: pre_tasks_handler
+      ansible.builtin.debug:
+        msg: "pre_tasks_handler"
+      listen: the_handlers
+    
+...

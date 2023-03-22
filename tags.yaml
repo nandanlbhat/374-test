@@ -1,0 +1,26 @@
+---
+- name: try tags
+  hosts: servera
+  gather_facts: false
+  tasks:
+    - name: task1
+      ansible.builtin.debug:
+        msg: task1
+      tags: 
+        - task1
+        #- never
+
+    - name: task2
+      ansible.builtin.debug:
+        msg: task2
+      tags: 
+        - task2
+        #- never
+
+    - name: task1
+      ansible.builtin.debug:
+        msg: task3
+      tags: 
+        - task3
+        #- never
+...

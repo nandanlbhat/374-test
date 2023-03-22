@@ -1,0 +1,22 @@
+---
+- name: show the id of user 
+  hosts: servera
+  gather_facts: false
+  #become: true
+
+  roles:
+    - role: student.testrole
+      become: true 
+
+#  tasks:
+#    - block:
+#      - name: gather the id 
+#        ansible.builtin.command: id
+#        changed_when: false
+#        register: id_out
+#      become: true
+#
+#    - name: show the id
+#      ansible.builtin.debug:
+#        var: id_out["stdout"]
+...

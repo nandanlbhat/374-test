@@ -1,0 +1,45 @@
+---
+- name: check order of execution
+  hosts: servera
+  gather_facts: false
+
+  pre_tasks:
+    - name: this was from pre_tasks
+      ansible.builtin.debug:
+        msg: "pre_task"
+      changed_when: true
+      notify: pre_tasks_handler
+
+
+  roles:
+    - role: student.testrole
+
+  tasks:
+    - name: this was in tasks section
+      ansible.builtin.debug:
+        msg: "tasks section"
+      changed_when: true
+      notify: tasks_handler
+ 
+  post_tasks:
+    - name: this was in post_tasks section
+      ansible.builtin.debug:
+        msg: "post_tasks section"
+      changed_when: true
+      notify: post_tasks_handler
+ 
+
+  handlers:
+    - name: pre_tasks_handler
+      ansible.builtin.debug:
+        msg: "pre_tasks_handler"
+    
+    - name: tasks_handler
+      ansible.builtin.debug:
+        msg: "tasks_handler"
+ 
+    - name: post_tasks_handler
+      ansible.builtin.debug:
+        msg: "post_tasks_handler"
+
+...

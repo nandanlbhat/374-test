@@ -1,0 +1,11 @@
+my_hosts:
+  hosts:
+    server[a:f].lab.example.com:
+  vars:
+    mygroupvar: "my value"
+
+servera:
+  hosts:
+    servera.lab.example.com:
+  vars:
+    myhostvar: "some value"
