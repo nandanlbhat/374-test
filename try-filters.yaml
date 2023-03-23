@@ -1,0 +1,11 @@
+---
+- name: try effect of filters
+  hosts: servera
+  gather_facts: false
+  vars_files:
+    - vars.yaml
+  tasks:
+    - name: try effect of filter
+      ansible.builtin.debug:
+        msg: data transformed by filter - {{ mydata | upper }}
+...

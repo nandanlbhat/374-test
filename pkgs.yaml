@@ -1,0 +1,29 @@
+---
+- name: install/clean some packages
+  hosts: servera
+  gather_facts: false
+  vars:
+    packages:
+      - httpd
+      - mod_ssl
+  become: true
+
+  tasks:
+    - name: install packages
+      ansible.builtin.yum:
+        name: "{{ packages }}"
+        state: present
+      #loop: "{{ packages }}"
+      tags:
+        - install
+        - never
+
+    - name: clean packages
+      ansible.builtin.yum:
+        name: "{{ packages }}"
+        state: absent
+      #loop: "{{ packages }}"
+      tags:
+        - clean
+        - never
+...

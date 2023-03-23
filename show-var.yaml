@@ -7,8 +7,8 @@
     testvar: "from playbook vars section"
     mynewvar: "trying out something"
 
-  #roles:
-  #  - role: student.testrole
+  roles:
+    - role: student.testrole
 
   tasks:
     - name: show value of a variable
