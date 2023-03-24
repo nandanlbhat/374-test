@@ -4,5 +4,8 @@ server[a:f].lab.example.com
 [servera]
 servera.lab.example.com
 
+[workstation]
+workstation.lab.example.com
+
 [servera:vars]
 testvar="from inventory-file group vars"

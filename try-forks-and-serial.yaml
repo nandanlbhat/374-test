@@ -1,0 +1,27 @@
+---
+- name: run a few slow running tasks
+  hosts: my_hosts
+  gather_facts: false
+  serial: 
+    - 1
+    - 40%
+    - 100% 
+  max_fail_percentage: 10
+  tasks:
+    - name: task 1 - sleep 3 seconds
+      command: sleep 3
+      changed_when: false
+
+    - name: task 2 - sleep 3 seconds
+      command: sleep 3
+      changed_when: false
+
+    - name: fail for servera
+      fail:
+        msg: task failed successfully
+      when: inventory_hostname == 'serverb.lab.example.com'
+
+    - name: task 3 - sleep 3 seconds
+      command: sleep 3
+      changed_when: false
+...
