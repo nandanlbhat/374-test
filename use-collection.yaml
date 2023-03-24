@@ -1,0 +1,8 @@
+---
+- name: use a collection
+  hosts: servera
+  gather_facts: false
+
+  roles:
+    - role: student.do374.greeting
+...

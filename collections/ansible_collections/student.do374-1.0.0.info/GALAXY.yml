@@ -1,0 +1,8 @@
+download_url: https://hub.lab.example.com/api/galaxy/v3/plugin/ansible/content/published/collections/artifacts/student-do374-1.0.0.tar.gz
+format_version: 1.0.0
+name: do374
+namespace: student
+server: https://hub.lab.example.com/api/galaxy/content/published/
+signatures: []
+version: 1.0.0
+version_url: /api/galaxy/content/published/v3/plugin/ansible/content/published/collections/index/student/do374/versions/1.0.0/
